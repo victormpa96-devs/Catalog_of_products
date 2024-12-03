@@ -1,0 +1,161 @@
+html,
+body {
+  height: 100%;
+  background-color: antiquewhite;
+}
+
+.d-none{
+  display: none;
+}
+
+.tippy-box[data-theme~="custom"] {
+  background-color: antiquewhite;
+  border: 2px solid black;
+  color: black;
+  font-weight: bold;
+}
+
+.tippy-box[data-theme~="custom"] .tippy-arrow {
+  color: black;
+}
+
+aside {
+  background-color: burlywood;
+  border: 2px solid black;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+aside div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+aside hr {
+  margin: 10px 0;
+  border: none;
+  height: 1px;
+  background-color: #000;
+}
+
+label {
+  width: fit-content;
+}
+
+select {
+  background-color: antiquewhite;
+}
+
+select:hover,
+.add:hover,
+.modify:hover,
+.delete:hover,
+#save:hover,
+.infoBtn:hover,
+.image:hover {
+  cursor: pointer;
+}
+
+.add,
+.modify,
+.delete {
+  font-weight: bold;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.add {
+  background-color: gold;
+}
+
+.add:active {
+  background-color: rgb(173, 147, 0);
+}
+
+.modify {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.modify:active {
+  background-color: rgb(56, 84, 138);
+}
+
+.delete {
+  background-color: crimson;
+  color: white;
+}
+
+.delete:active {
+  background-color: rgb(134, 1, 28);
+}
+
+.infoBtn {
+  width: 21px;
+}
+
+.infoBtn:active {
+  box-shadow: 0 0 0 2px rgb(146, 146, 255);
+  border-radius: 50%;
+}
+
+#save {
+  background-color: lightgreen;
+  border: 3px solid forestgreen;
+  color: darkgreen;
+  font-weight: bold;
+  font-size: large;
+}
+
+#save:active {
+  background-color: forestgreen;
+  border: 3px solid lightgreen;
+  color: lightgreen;
+}
+
+
+#imagesContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#imagesContainer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+#imagesContainer div > img {
+  width: 255px;
+  height: 255px;
+  border-bottom: 1px solid black;
+  background-color: white;
+  margin-bottom: 0;
+}
+
+#imagesContainer .image.active {
+  border: 2px solid red;
+}
+
+#imagesContainer .image span {
+  width: 255px;
+  height: fit-content;
+  text-align: center;
+  background-color: burlywood;
+  font-weight: bolder;
+}
+
+#imagesContainer .image.active span {
+  width: 255px;
+  height: fit-content;
+  text-align: center;
+  background-color: black;
+  color: blanchedalmond;
+}

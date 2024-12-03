@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCTS CATALOG [VA]</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <aside>
+      <div>
+        <label for="categories">Select Category:</label>
+        <select
+          name="categories"
+          id="categories"
+          onchange="printCatalog()"
+        ></select>
+      </div>
+      <div>
+        <label for="addCategory">Add new category:</label>
+        <input type="text" id="addCategory" />
+        <input type="button" class="add" value="Add" id="addCategoryBtn" />
+      </div>
+      <div>
+        <label for="modifyCategoryName">Modify category name from</label>
+        <select name="modifyCategoryName" id="modifyCategoryName"></select>
+        <span>to</span>
+        <input type="text" id="modifyCategoryNameInput" />
+        <input
+          type="button"
+          value="Modify"
+          class="modify"
+          id="modifyCategoryNameBtn"
+        />
+      </div>
+
+      <hr />
+
+      <section id="addModifySection">
+        <div>
+          <img
+            id="addmodifyTippyButton"
+            src="./img/info.png"
+            class="infoBtn"
+            alt="Info"
+          />
+          <label for="inputTitle"> Add / Modify a product: </label>
+          <input type="text" placeholder="Image URL" id="inputLink" />
+          <input type="text" placeholder="Product Title" id="inputTitle" />
+          <input type="button" value="Add" class="add" id="add" />
+          <input type="button" value="Modify" class="modify" id="modify" />
+        </div>
+      </section>
+
+      <hr />
+
+      <div>
+        <select name="categories" id="categoriesSwitch"></select>
+        <input
+          type="button"
+          value="Switch selected products to this category"
+          class="modify"
+          id="changeCategory"
+        />
+      </div>
+
+      <hr />
+
+      <div>
+        <select name="categories" id="categoriesDelete"></select>
+        <input
+          type="button"
+          value="Delete selected category"
+          class="delete"
+          id="deleteCategory"
+        />
+      </div>
+
+      <hr />
+
+      <div>
+        <img
+          id="deleteTippyButton"
+          src="./img/info.png"
+          class="infoBtn"
+          alt="Info"
+        />
+        <input
+          type="button"
+          value="Delete selected products"
+          class="delete"
+          id="delete"
+        />
+      </div>
+
+      <hr />
+
+      <div>
+        <input type="button" value="SAVE" id="save" />
+      </div>
+    </aside>
+
+    <main>
+      <section id="imagesContainer"></section>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      tippy("#addmodifyTippyButton", {
+        allowHTML: true,
+        content:
+          "<p>ADD a new product ( Image and Name product required )</p><p>Click on a product to MODIFY it or ADD a new product in that position.</p>",
+        theme: "custom",
+        trigger: "click",
+      });
+      tippy("#deleteTippyButton", {
+        allowHTML: true,
+        content:
+          "<p>Click on a product or multiples products (Ctrl+Click) to delete them</p>",
+        theme: "custom",
+        trigger: "click",
+      });
+    </script>
+  </body>
+</html>
